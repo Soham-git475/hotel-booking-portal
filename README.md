@@ -41,3 +41,29 @@ npm run dev
 To run the automated backend tests for booking logic and date validation:
 cd backend
 npm test
+
+## Demo
+
+### 1. Home Page
+![Home Page](Home-page.png)
+
+### 2. Hotels Page
+![Hotels Page](Hotels-page.png)
+
+### 3. Review and Payment
+![Review and Payment Page](Review-pay-page.png)
+
+### 4. Confirmation
+![Confirmation Page](Confirmation-page.png)
+
+### 5. Manage Booking
+![Manage Page](Manage-page.png)
+
+### 6. Booking Details
+![Details Page](Details-page.png)
+
+### 7. Cancel Popup
+![Review and Payment Page](Cancel-popup.png)
+
+### 8. After Cancellation
+![Review and Payment Page](After-cancel.png)
