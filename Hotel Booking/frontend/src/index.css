@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg: #f7f9fa;
+  --surface: #ffffff;
+  --primary: #006ce4;
+  --primary-hover: #0057b8;
+  --text-main: #1a1a1a;
+  --text-muted: #5e6d77;
+  --border: #e6e6e6;
+  --radius: 16px;
+}
+
+* { 
+  box-sizing: border-box; 
+  font-family: 'Plus Jakarta Sans', sans-serif; 
+}
+
+body { 
+  margin: 0; 
+  padding: 0; 
+  background-color: var(--bg); 
+  color: var(--text-main); 
+  -webkit-font-smoothing: antialiased;
+}
+
+nav { 
+  background: var(--surface); 
+  padding: 1.2rem 3rem; 
+  display: flex; 
+  gap: 32px;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  align-items: center;
+}
+
+nav a { 
+  color: var(--text-main); 
+  text-decoration: none; 
+  font-weight: 600; 
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+nav a:hover { color: var(--primary); }
+
+.container { 
+  max-width: 1200px; 
+  margin: 0 auto 4rem auto; 
+  padding: 0 2rem; 
+}
+
+/* Hero Section with Unified Search Pill */
+.hero {
+  background: var(--primary);
+  background: linear-gradient(135deg, #003b95 0%, #006ce4 100%);
+  padding: 5rem 2rem;
+  text-align: center;
+  color: white;
+  margin-bottom: 3rem;
+}
+
+.hero h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.02em;
+}
+
+.hero p.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  opacity: 0.9;
+}
+
+.search-pill {
+  display: flex;
+  background: var(--surface);
+  padding: 8px;
+  border-radius: 999px;
+  max-width: 900px;
+  margin: 0 auto;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  align-items: center;
+}
+
+.search-pill input {
+  border: none;
+  background: transparent;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  width: 100%;
+  color: var(--text-main);
+  border-right: 1px solid var(--border);
+  border-radius: 0;
+  margin: 0;
+}
+
+.search-pill input:focus {
+  outline: none;
+  background: #f8fafc;
+}
+
+.search-pill input:nth-last-of-type(1) {
+  border-right: none;
+}
+
+.search-pill button {
+  background: var(--primary);
+  border-radius: 999px;
+  margin: 0 0 0 8px;
+  padding: 1rem 2.5rem;
+  width: auto;
+  white-space: nowrap;
+  font-size: 1.05rem;
+}
+
+/* Modern Hotel Cards */
+.hotel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 2rem;
+}
+
+.hotel-card { 
+  background: var(--surface); 
+  border-radius: var(--radius); 
+  border: 1px solid var(--border);
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.hotel-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+}
+
+.img-wrapper {
+  width: 100%;
+  height: 240px;
+  background: #eaeaea;
+  overflow: hidden;
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.hotel-card:hover .img-wrapper img {
+  transform: scale(1.05);
+}
+
+.card-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-content h3 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.location-tag {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.amenities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 1rem 0;
+  flex-grow: 1;
+}
+
+.badge {
+  background: #f1f5f9;
+  color: #334155;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.price {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.price span {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.price-row button {
+  width: auto;
+  margin: 0;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+}
+
+/* Utilities */
+button { 
+  background: var(--primary); 
+  color: white; 
+  border: none; 
+  cursor: pointer; 
+  font-weight: 600; 
+  transition: all 0.2s;
+}
+button:hover { background: var(--primary-hover); }
+.error { color: #e11d48; font-weight: 500; text-align: center; margin-top: 1.5rem; background: #fff1f2; padding: 1rem; border-radius: 8px; }
